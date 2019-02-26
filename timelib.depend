@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1551172572 source:c:\users\teilnehmer.pc29\desktop\portablegit\timelib\bibliothek.h
+
+1551169267 source:c:\users\teilnehmer.pc29\desktop\portablegit\timelib\main.c
+	<stdlib.h>
+	<stdio.h>
+	"bibliothek.h"
+
+1551172572 c:\users\teilnehmer.pc29\desktop\portablegit\timelib\bibliothek.h
+
+1551172572 source:c:\users\teilnehmer.pc29\desktop\portablegit\timelib\bibliothek.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliothek.h"
+

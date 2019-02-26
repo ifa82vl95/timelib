@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="019C78BB11FFA3E0">
+  <PROJECT FORMAT="1.00" NAME="Tag des Jahres 2" AUTHOR="teilnehmer" CREATED="2019.01.07 14:50:33" MODIFIED="2019.01.15 10:52:50">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="day of the year" CREATED="2019.01.07 14:50:46" MODIFIED="2019.01.15 10:52:50">
+        <LAYOUT FORMAT="1.00" COLUMNS="3" ROWS="13">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="23">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="26">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="35">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="36">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[day of the year]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[durch exists_date() prüfen ob das übergebene Datum gültig ist]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="3">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[exists_date]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[Ein Datum ist ungültig wenn es vor dem 1.1.1582 oder nach dem 31.12.2400 ist.
+Es ist ungültig wenn es nicht den Monaten 1-12 entspricht.
+Es ist ungültig wenn der Tag im Monat nicht existiert z.B. 31. Februar (Schaltjahre berücksichtigen)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[exist?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Array days[2][13] erstellen für die Tagesanzahl je Monatsfortschritt (zusätzlich auch für ein Schaltjahr)
+{0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334}
+{0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335}]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[durch is_leapyear prüfen ob es sich um ein Schaltjahr handelt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[is_leapyear]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[Schaltjahr ist wenn das Jahr durch 4 aber nicht durch 100 teilbar ist, wenn es durch 100 teilbar ist, muss es auch durch 400 teilbar sein (alles ohne rest).
+Bei allen anderen Fällen ist es kein Schaltjahr.]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="32">
+                <TEXT><![CDATA[isLeapyear?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[genauen Tag errechen days [isleapyear][month] + day]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="29">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="34">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="39">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="14" TO="32" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="16" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="19" FROM="18" TO="20" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="22" TO="29" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="20" TO="23" TEXT="True = return 1" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="20" TO="22" TEXT="False = return 0" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="23" TO="26" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="26" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="29" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="32" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="37" FROM="35" TO="36" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="36" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="34" TO="39" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="41" FROM="39" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="42" FROM="32" TO="35" TEXT="True = return 1" />
+          <CONNECTION FORMAT="1.00" ID="43" FROM="32" TO="34" TEXT="False = return 0" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>
